@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrierefreies Karussell</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div
+    id="carousel"
+    aria-roledescription="Karussell"
+    aria-label="Themen-Übersicht"
+  >
+    <div class="carousel">
+      <div
+        id="slide-track"
+        class="slide-track"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+
+        <div role="group" aria-roledescription="Folie"
+             aria-label="Folie 1 von 5: Barrierefreiheit im Web"
+             class="slide" id="slide-0">
+          <h3>Barrierefreiheit im Web</h3>
+          <p>Barrierefreies Webdesign stellt sicher, dass alle Menschen – unabhängig
+          von körperlichen oder kognitiven Einschränkungen – digitale Inhalte vollständig
+          nutzen können. Es ist kein optionales Feature, sondern ein Grundrecht der
+          digitalen Teilhabe.</p>
+        </div>
+
+        <div role="group" aria-roledescription="Folie"
+             aria-label="Folie 2 von 5: Semantisches HTML"
+             class="slide" id="slide-1">
+          <h3>Semantisches HTML</h3>
+          <p>Semantische HTML-Elemente wie <code>&lt;nav&gt;</code>,
+          <code>&lt;main&gt;</code> oder <code>&lt;article&gt;</code> geben
+          Screenreadern eine klare Struktur. Sie kommunizieren nicht nur das Aussehen,
+          sondern die Bedeutung eines Elements – und sind die Grundlage jeder
+          zugänglichen Seite.</p>
+        </div>
+
+        <div role="group" aria-roledescription="Folie"
+             aria-label="Folie 3 von 5: Tastaturnavigation"
+             class="slide" id="slide-2">
+          <h3>Tastaturnavigation</h3>
+          <p>Viele Nutzer navigieren ausschließlich per Tastatur – sei es durch
+          motorische Einschränkungen oder assistive Technologien. Jede interaktive
+          Komponente muss daher vollständig ohne Maus bedienbar sein und einen
+          sichtbaren Fokus-Indikator besitzen.</p>
+        </div>
+
+        <div role="group" aria-roledescription="Folie"
+             aria-label="Folie 4 von 5: ARIA-Rollen und -Attribute"
+             class="slide" id="slide-3">
+          <h3>ARIA-Rollen und -Attribute</h3>
+          <p>WAI-ARIA ergänzt HTML dort, wo native Semantik nicht ausreicht. Attribute
+          wie <code>aria-label</code>, <code>aria-expanded</code> oder
+          <code>aria-live</code> übermitteln Zustand und Kontext an Screenreader –
+          ohne das visuelle Erscheinungsbild zu verändern.</p>
+        </div>
+
+        <div role="group" aria-roledescription="Folie"
+             aria-label="Folie 5 von 5: Farbkontrast und Lesbarkeit"
+             class="slide" id="slide-4">
+          <h3>Farbkontrast und Lesbarkeit</h3>
+          <p>WCAG 2.1 schreibt für normalen Text ein Kontrastverhältnis von mindestens
+          4,5:1 vor. Ausreichender Kontrast hilft nicht nur Menschen mit
+          Sehbehinderungen, sondern verbessert die Lesbarkeit in hellen Umgebungen
+          und auf minderwertigen Displays für alle.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="controls">
+
+      <div class="ctrl-group">
+        <button id="btn-pause" aria-label="Automatische Wiedergabe pausieren">
+          <!-- Icon wird per JS gesetzt -->
+          &#9646;&#9646;
+        </button>
+        <button id="btn-prev" aria-label="Vorherige Folie">&#8592;</button>
+        <button id="btn-next" aria-label="Nächste Folie">&#8594;</button>
+      </div>
+
+      <div class="dot-group" role="tablist" aria-label="Folien-Auswahl">
+        <button role="tab" class="dot" aria-selected="true"
+                aria-controls="slide-0"
+                aria-label="Folie 1: Barrierefreiheit im Web"></button>
+        <button role="tab" class="dot" aria-selected="false"
+                aria-controls="slide-1"
+                aria-label="Folie 2: Semantisches HTML"></button>
+        <button role="tab" class="dot" aria-selected="false"
+                aria-controls="slide-2"
+                aria-label="Folie 3: Tastaturnavigation"></button>
+        <button role="tab" class="dot" aria-selected="false"
+                aria-controls="slide-3"
+                aria-label="Folie 4: ARIA-Rollen und -Attribute"></button>
+        <button role="tab" class="dot" aria-selected="false"
+                aria-controls="slide-4"
+                aria-label="Folie 5: Farbkontrast und Lesbarkeit"></button>
+      </div>
+
+    </div>
+
+    <!-- Visuell versteckte Live-Region für Statusmeldungen an Screenreader -->
+    <span
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"
+      id="slide-status"
+    ></span>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

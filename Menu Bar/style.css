@@ -1,0 +1,124 @@
+.menubar {
+  background-color: #eee;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menubar ul {
+  background-color: #eee;
+  border: 1px solid #50C878;
+  border-top-width: 5px;
+  border-radius: 0 0 4px 4px;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  min-width: 200px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.menubar li {
+  margin: 0;
+}
+
+.menubar > li {
+  display: flex;
+  position: relative;
+}
+
+.menubar ul a {
+  border: 0;
+  color: #000;
+  display: block;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+.menubar ul a:hover,
+.menubar ul a:focus {
+  background-color: #8ced94;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.menubar ul a:focus {
+  outline: 5px solid rgb(0 90 156 / 75%);
+  position: relative;
+}
+
+.menubar button,
+.menubar .main-link {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-right-color: #ccc;
+  display: flex;
+  padding: 1em;
+}
+
+.menubar .main-link {
+  border-right-color: transparent;
+}
+
+.menubar button::after {
+  content: "";
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  height: 0.5em;
+  margin-left: 0.75em;
+  width: 0.5em;
+  transform: rotate(45deg);
+}
+
+.disclosure-nav .main-link + button::after {
+  margin-left: 0;
+}
+
+.disclosure-nav button:focus,
+.disclosure-nav .main-link:focus {
+  border-color: #005a9c;
+  outline: 5px solid rgb(0 90 156 / 75%);
+  position: relative;
+}
+
+.disclosure-nav button:hover,
+.disclosure-nav button[aria-expanded="true"] {
+  background-color: #82b887;
+  color: #fff;
+}
+
+.disclosure-nav button:hover::after,
+.disclosure-nav button[aria-expanded="true"]::after {
+  border-color: #fff;
+}
+
+/* Styles for example page content section */
+.disclosure-page-content {
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+.disclosure-page-content h3 {
+  margin-top: 0.5em;
+}
+
+.sample-header {
+  border: #005a9c solid 2px;
+  background: #005a9c;
+  color: white;
+  text-align: center;
+}
+
+.sample-header .title {
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.sample-header .tagline {
+  font-style: italic;
+}
+

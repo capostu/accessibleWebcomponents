@@ -1,0 +1,128 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#carousel {
+  max-width: 720px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+
+/* NEU */
+.carousel {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;  /* Slides außerhalb des Sichtbereichs verstecken */
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.35s ease;
+  width: 100%;       /* Track kennt seine eigene Breite */
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.slide h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  color: #111;
+}
+
+.slide p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+.progress {
+  height: 2px;
+  background: #eee;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #555;
+  width: 0%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  border-radius: 0 0 12px 12px;
+}
+
+.ctrl-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Buttons */
+button {
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.dot-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dot[aria-selected="true"] {
+  background: #111;
+  border-color: #111;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
